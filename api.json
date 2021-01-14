@@ -1,0 +1,88 @@
+{
+    "swagger": "2.0", 
+    "info": {
+        "description": "This is api documentation for MoneyCeo User module.",
+        "version": "1.0.0",
+        "title": "Swagger user-lambda-api",
+        "termsOfService": "https://qa-user.moneyceoapp.com/",
+        "contact": {
+            "email": "demobsetec@gmail.com"
+        }
+    },    
+    "basePath" : "/",
+    "tags": [{
+            "name": "API-V1"
+        },
+        {
+            "name": "API-V2"
+        }       
+    ],
+    "schemes": [
+        "https",
+        "http"
+    ],
+    "paths": {
+        "/api/v1/parse": {
+            "post": {
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "tags": [
+                    "API-V1"
+                ],
+                "summary": "",
+                "description": "This api endpoint for version 1",
+                "operationId": "v1-parse",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "input",
+                        "in": "formData",
+                        "default":"JOHN0000-MICHAEL-0009994567",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully Done"
+                    }
+                }
+            }
+        },
+        "/api/v2/parse": {
+            "post": {
+                "consumes": [
+                    "application/x-www-form-urlencoded"
+                ],
+                "tags": [
+                    "API-V2"
+                ],
+                "summary": "",
+                "description": "This api endpoint for version 2",
+                "operationId": "v2-parse",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "input",
+                        "in": "formData",
+                        "default":"JOHN0000-MICHAEL-0009994567",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfully Done"
+                    }
+                }
+            }
+        }        
+    }
+}
